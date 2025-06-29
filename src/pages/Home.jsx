@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Welcome to The Chat House</h1>
+        <h1>Welcome to The Chat Houses</h1>
         <p>Connect with your people!</p>
       </header>
 
