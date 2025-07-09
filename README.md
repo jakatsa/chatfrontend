@@ -1,12 +1,82 @@
-# React + Vite
+# **ChatSystem Frontend**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend interface for the real-time chat system built with **React**, supporting live messaging, typing indicators, and online user presence with WebSocket integration.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Key Features**
 
-## Expanding the ESLint configuration
+- **Real-Time Updates**:  
+  Leverages WebSocket to provide instant message delivery.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **User Interface**:  
+  Built using React with a clean and responsive design.
+
+- **Online Status Display**:  
+  Shows a list of online users in the conversation.
+
+- **Typing Indicators**:  
+  Displays when another user is typing in the conversation.
+
+- **Authentication and Authorization**:  
+  Uses JWT for managing user sessions.
+
+- **Error Handling**:  
+  Graceful handling of network and server errors.
+
+---
+
+## **Project Structure**
+
+```plaintext
+chatappfrontend/
+├── components/
+│   ├── Conversation.jsx    # Manages real-time chat UI and WebSocket communication
+│   ├── ChatList.jsx        # Displays the list of conversations
+│   ├── Login.jsx           # Handles user login
+│   ├── Register.jsx        # Handles user registration
+├── styles/                 # Custom CSS styles for responsiveness and design
+├── App.jsx                 # Main app component
+├── main.jsx                # Entry point
+└── package.json            # Dependency definitions
+```
+
+---
+
+## **Frontend Setup**
+
+1. **Navigate to Project Directory**
+
+   ```bash
+   cd chatappfrontend
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the Development Server**
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## **Key Components**
+
+### **WebSocket Client**
+
+- **Real-Time Communication**:
+
+  - Connects to the backend WebSocket server.
+  - Sends and receives real-time events (messages, typing indicators).
+
+- **Message List**:
+
+  - Displays messages with a clear distinction between sent and received messages.
+
+- **Typing Indicator**:
+  - Displays the name of the user typing in the chat.
